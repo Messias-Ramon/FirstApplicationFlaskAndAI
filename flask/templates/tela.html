@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subcomponent Predicion</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Super IA treinada por uma equipe sensacional!</h1>
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <label for="  ">WOdescription</label>
+                <input type="text" id="WOdescription" name="WOdescription" class="form-control" placeholder="Work order description" required>
+            </div>
+            <div class="form-group">
+                <label for="Comodity">Comodity</label>
+                <input type="text" id="Comodity" name="Comodity" class="form-control" placeholder="Comodity" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        
+        <div class="container mt-5">
+          <h3>Subcomponent: {{ resp }}</h3>
+        </div>
+    </div>
+
+</body>
+</html>
