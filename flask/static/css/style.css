@@ -1,0 +1,25 @@
+#pergunta, #resposta{
+  display: inline-block;
+  width: 35%;
+}
+
+#pergunta{
+  height: 100px;
+  margin: 10px;
+  line-height: 45px;  
+}
+
+#resposta{
+  position: relative;
+  top: -250px;
+  left: 120px;
+}
+
+.col{
+  font-size: 20px; /* Tamanho da fonte */
+  font-weight: bold; /* Deixa o texto em negrito */
+  background-color: #f4f4f4; /* Cor de fundo */
+  padding: 10px; /* Espaçamento interno */
+  text-align: center; /* Alinha o texto ao centro */
+}
+

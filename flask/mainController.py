@@ -1,7 +1,6 @@
 from flask import Flask, request, render_template 
 import random
 
-lista = ["A", "B", "C"]
 
 app = Flask(__name__)
 
@@ -11,7 +10,7 @@ def home():
 
 @app.route('/submit', methods=['POST'])
 def submit():
-    return render_template('tela.html', resp = lista[random.randint(0,2)])  # Retorna o nome com a mensagem
+    return render_template('tela.html', sub_component = "window", probability = "28%")  # Retorna o nome com a mensagem
 
 if __name__ == '__main__':
     app.run()

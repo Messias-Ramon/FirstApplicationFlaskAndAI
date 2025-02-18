@@ -2,29 +2,44 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Subcomponent Predicion</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container mt-5" id="pergunta">
         <h1>Super IA treinada por uma equipe sensacional!</h1>
-        <form action="/submit" method="POST">
+        <form action="/submit" method="POST" id="form">
             <div class="form-group">
                 <label for="  ">WOdescription</label>
-                <input type="text" id="WOdescription" name="WOdescription" class="form-control" placeholder="Work order description" required>
-            </div>
-            <div class="form-group">
-                <label for="Comodity">Comodity</label>
-                <input type="text" id="Comodity" name="Comodity" class="form-control" placeholder="Comodity" required>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-        
-        <div class="container mt-5">
-          <h3>Subcomponent: {{ resp }}</h3>
-        </div>
     </div>
+
+    <div class="table-responsive" id = "resposta">
+        <table class="table table-striped table-hover table-sm">
+            <thead>
+                <tr>
+                    <th>Subcomponent</th>
+                    <th>Probability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr >
+                    <td>{{sub_component}}</td>
+                    <td>{{probability}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="{{ url_for('static', filename='JavaScript/script.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
 </html>
